@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="X-Content-Security-Policy" content="img-src 'self' data:; default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src 'self'; script-src 'self'">
+    <title>在线bitmap制作工具</title>
+    <script src="./FileSaver.js"></script>
+
+  </head>
+
+  <body>
+    <div id="drop_zone" >
+        <table>
+            <tr>
+                <td>
+                    <br>将所有位图字体的散图都拖到红框中: <br>
+                    <br>输入导出文件的名字: <br>
+                    <input id="input_fontName"/>
+                    <br>画布宽高: <br>
+                    <input type="number" id="input_CanvasWidth"/> 
+                    <input type="number" id="input_CanvasHeight"/>
+                    <br>
+                    <button id='button_adapta'>导出图集宽高自动适配大小</button>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr> 位图字体的图集预览如下： </tr>
+        </table>
+        <table>
+            <tr colspan="6" >
+                <canvas id="canvas_font" ></canvas>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <div id="div_font_setting">
+                </div>
+            </tr>
+        </table>
+        <br> 输入文字预览效果: <br>
+        <input id="input_preview"/><br>
+        <canvas id="canvas_preview" ></canvas>
+        <br>
+        <button id='button_save'>下载位图文件</button>
+        <br>
+        <button id='button_clear'>清除所有图片</button>
+    </div>
+
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+#drop_zone {
+  border: solid 2px red;
+}
+
+canvas {
+  border: dashed 1px #585858;
+  margin: 0 auto;
+}
