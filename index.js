@@ -95,6 +95,7 @@ const getSplitNum = function (total) {
         if (total % i === 0) {
             col = i;
             row = total / i;
+            break;
         }
     }
     if (row !== 0 && col !== 0) {
